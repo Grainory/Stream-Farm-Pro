@@ -1,47 +1,89 @@
 # StreamFarm Pro
-
-StreamFarm Pro is a specialized Windows desktop utility designed to bypass background browser throttling, enabling the simultaneous viewing of multiple TikTok Live streams (2, 4, 6, or 8) without performance degradation. It leverages a custom Electron helper to ensure all active streams remain prioritized by the OS, regardless of window focus.
-
-> **Note**: This tool is limited to Windows OS.
+StreamFarm Pro is a Windows-based utility that interfaces with core Chromium flags to simulate valid foreground activity on multiple browser instances. It provides a configurable bridge between modern web apps and the resource-constrained Windows desktop environment, allowing for smooth video playback without background throttling.
 
 ## Features
-- **Anti-Throttling Engine**: Uses deep system flags (`disable-renderer-backgrounding`) to prevent Chromium from freezing background tabs.
-- **Dynamic Grid System**: Instantly switch between 2x, 4x, 6x, and 8x grid layouts.
+- **Anti-Throttling Engine**: Native support for disabling background timer throttling via direct Electron internals.
+- **Dynamic Grid System**: Instantly switch between 2x, 4x, 6x, and 8x layouts.
 - **Background Persistence**: Minimized or unfocused windows continue to render and play audio/video at full priority.
-- **Smart Audio Management**: All streams auto-mute on load. Click any stream to unmute and focus.
+- **Smart Audio Management**: Streams auto-mute on load. Click a stream to unmute and focus.
+- **Clean Uninstall**: Custom uninstaller ensures zero leftover files.
 
 ## Installation
+StreamFarm Pro is available in two versions: Installer (recommended) and Portable (Lite).
 
-### Prerequisites
-- Windows 10/11 (Architecture x64 recommended)
-- Node.js (Runtime)
+### Option 1: Installer (Recommended)
+Best for most users. Creates shortcuts and an uninstaller.
+1. Download StreamFarm Pro Setup 1.0.0.exe.
+2. Run the installer.
+3. StreamFarm Pro will launch automatically.
 
-### Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YourUsername/tiktok-live-farm.git
-   ```
-2. Navigate to the directory:
-   ```bash
-   cd tiktok-live-farm
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Start the application:
-   ```bash
-   npm start
-   ```
+```
+StreamFarm Pro Setup 1.0.0.exe
+```
+
+### Option 2: Portable / Lite (can be download in release 1.0.0)
+Best for USB drives or use without administrator rights.
+1. Download StreamFarm Pro Lite.exe.
+2. Place it anywhere (e.g., D:\Tools\).
+3. Double-click to run. No installation required.
+
+```
+StreamFarm Pro Lite.exe
+```
+
+
+```
+D:\Tools\
+```
+
+**Note**
+Windows SmartScreen Warning: Since this is a free open-source project, it does not have a paid digital signature. If you see a "Windows protected your PC" popup:
+1. Click "More Info".
+2. Click "Run Anyway".
+This is a standard check for all new software not from the Microsoft Store.
 
 ## Usage
-1. **Launch**: Run `npm start` to open the StreamFarm dashboard.
-2. **Input URL**: Paste the target TikTok Live URL (e.g., `https://www.tiktok.com/@username/live`) into the top input bar.
-3. **Select Grid**: Choose your desired view count (2, 4, 6, or 8).
-4. **Load**: Click "Load Streams" to initialize the farm.
-5. **Manage**: 
-   - Click "6 Views" to dynamically expand your farm.
-   - Click a video stream to unmute it (others remain muted).
+ensure your internet connection is stable before or after launching StreamFarm Pro. The grid buttons in the top bar will control the layout state.
 
-## License
-MIT License. Free for personal and educational use.
+### Default Controls
+- **Input Bar**: Accepts TikTok Live or other video URLs.
+- **Grid Buttons**: Switches between 2, 4, 6, and 8 view modes.
+- **Stream Click**: Unmutes the selected stream and mutes all others.
+
+### Configuration Interface
+The interface provides the following adjustments:
+- **Load Streams**: Initializes the grid with the provided URL.
+- **Clear All**: Wipes the current session.
+- **Resize**: Application window is fully resizable and responsive.
+
+## Development
+
+### Prerequisites
+- Node.js (LTS version recommended)
+- npm (Node Package Manager)
+
+### Build Instructions
+1. 
+Clone the repository:
+```
+git clone https://github.com/yourusername/StreamFarmPro.git
+cd StreamFarmPro
+```
+
+2. 
+Install dependencies:
+```
+npm install
+```
+
+3. 
+Run in development mode:
+```
+npm start
+```
+
+4. 
+Build for production (generates installer in dist/):
+```
+npm run dist
+```
