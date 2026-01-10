@@ -6,7 +6,6 @@ StreamFarm Pro is a Windows-based utility that interfaces with core Chromium fla
 - **Dynamic Grid System**: Instantly switch between 2x, 4x, 6x, and 8x layouts.
 - **Background Persistence**: Minimized or unfocused windows continue to render and play audio/video at full priority.
 - **Smart Audio Management**: Streams auto-mute on load. Click a stream to unmute and focus.
-- **Clean Uninstall**: Custom uninstaller ensures zero leftover files.
 
 ## Installation
 StreamFarm Pro is available in two versions: Installer (recommended) and Portable (Lite).
@@ -87,3 +86,4 @@ Build for production (generates installer in dist/):
 ```
 npm run dist
 ```
+
