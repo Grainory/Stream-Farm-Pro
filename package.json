@@ -1,0 +1,36 @@
+{
+  "name": "tiktok-live-farm",
+  "version": "1.0.0",
+  "description": "Premium multi-view browser for TikTok Live without background throttling.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.streamfarm.pro",
+    "productName": "StreamFarm Pro",
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": true,
+      "include": "build/installer.nsh"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^26.4.0",
+    "png-to-ico": "^3.0.1",
+    "to-ico": "^1.1.5"
+  }
+}

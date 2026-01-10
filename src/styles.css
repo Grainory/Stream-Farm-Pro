@@ -1,0 +1,220 @@
+/* Solid Premium Theme - No Neon, Matte Finish */
+:root {
+    --bg-dark: #0a0a0a;
+    --bg-panel: #141414;
+    --bg-element: #1f1f1f;
+    --bg-hover: #2a2a2a;
+
+    --border-color: #333333;
+
+    --text-primary: #ededed;
+    --text-secondary: #a0a0a0;
+
+    --accent-color: #ffffff;
+    /* Stark white for active states */
+    --accent-muted: #666666;
+
+    --danger-color: #cf6679;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Control Bar */
+.control-bar {
+    height: 60px;
+    background-color: var(--bg-panel);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.brand h1 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+}
+
+.input-group {
+    flex: 1;
+}
+
+.input-group input {
+    width: 100%;
+    background-color: var(--bg-element);
+    border: 1px solid var(--border-color);
+    padding: 10px 15px;
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: var(--accent-muted);
+}
+
+/* Grid Controls */
+.grid-controls {
+    display: flex;
+    background-color: var(--bg-element);
+    border-radius: 6px;
+    padding: 4px;
+    gap: 2px;
+}
+
+.grid-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 6px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.grid-btn:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-hover);
+}
+
+.grid-btn.active {
+    background-color: var(--bg-hover);
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Action Buttons */
+.action-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s;
+}
+
+.action-btn.primary {
+    background-color: var(--text-primary);
+    color: var(--bg-dark);
+}
+
+.action-btn.primary:hover {
+    background-color: #d4d4d4;
+}
+
+.action-btn.danger {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--danger-color);
+}
+
+.action-btn.danger:hover {
+    background-color: rgba(207, 102, 121, 0.1);
+    border-color: var(--danger-color);
+}
+
+/* Stream Grid */
+.stream-grid {
+    flex: 1;
+    display: grid;
+    gap: 4px;
+    background-color: var(--bg-dark);
+    /* Grid gap color */
+    padding: 4px;
+    overflow: hidden;
+    /* Prevent scroll */
+}
+
+/* Grid States */
+.grid-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-4 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+.grid-8 {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+/* Webview Container */
+.stream-container {
+    background-color: #000;
+    position: relative;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+
+.stream-container.focused {
+    border-color: var(--text-primary);
+}
+
+webview {
+    width: 100%;
+    height: 100%;
+}
+
+/* Scrollbar Polish */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-hover);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-muted);
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+    user-select: none;
+    letter-spacing: 0.5px;
+}

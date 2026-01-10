@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamFarm Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Premium Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Control Sidebar / Topbar -->
+        <header class="control-bar">
+            <div class="brand">
+                <h1>StreamFarm</h1>
+            </div>
+            
+            <div class="input-group">
+                <input type="text" id="urlInput" placeholder="Paste TikTok Live URL..." value="https://www.tiktok.com/@tiktok">
+            </div>
+
+            <div class="grid-controls">
+                <button class="grid-btn active" data-grid="2">2 Views</button>
+                <button class="grid-btn" data-grid="4">4 Views</button>
+                <button class="grid-btn" data-grid="6">6 Views</button>
+                <button class="grid-btn" data-grid="8">8 Views</button>
+            </div>
+
+            <div class="actions">
+                <button id="addStreamBtn" class="action-btn primary">Load Streams</button>
+                <button id="clearBtn" class="action-btn danger">Clear All</button>
+            </div>
+        </header>
+
+        <!-- Main Grid Area -->
+        <main class="stream-grid" id="streamGrid">
+            <!-- Webviews will be injected here -->
+            <div class="empty-state">
+                <p>Select grid size and load a URL to begin.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
