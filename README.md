@@ -8,31 +8,12 @@ StreamFarm Pro is a Windows-based utility that interfaces with core Chromium fla
 - **Smart Audio Management**: Streams auto-mute on load. Click a stream to unmute and focus.
 
 ## Installation
-StreamFarm Pro is available in two versions: Installer (recommended) and Portable (Lite).
-
-### Option 1: Installer (Recommended)
-Best for most users. Creates shortcuts and an uninstaller.
 1. Download StreamFarm Pro Setup 1.0.0.exe.
 2. Run the installer.
 3. StreamFarm Pro will launch automatically.
 
 ```
 StreamFarm Pro Setup 1.0.0.exe
-```
-
-### Option 2: Portable / Lite (can be download in release 1.0.0)
-Best for USB drives or use without administrator rights.
-1. Download StreamFarm Pro Lite.exe.
-2. Place it anywhere (e.g., D:\Tools\).
-3. Double-click to run. No installation required.
-
-```
-StreamFarm Pro Lite.exe
-```
-
-
-```
-D:\Tools\
 ```
 
 **Note**
@@ -86,4 +67,5 @@ Build for production (generates installer in dist/):
 ```
 npm run dist
 ```
+
 
