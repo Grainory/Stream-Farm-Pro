@@ -26,7 +26,7 @@ This is a standard check for all new software not from the Microsoft Store.
 ensure your internet connection is stable before or after launching StreamFarm Pro. The grid buttons in the top bar will control the layout state.
 
 ### Default Controls
-- **Input Bar**: Accepts TikTok Live or other video URLs.
+- **Input Bar**: Accepts URLs.
 - **Grid Buttons**: Switches between 2, 4, 6, and 8 view modes.
 - **Stream Click**: Unmutes the selected stream and mutes all others.
 
@@ -67,5 +67,6 @@ Build for production (generates installer in dist/):
 ```
 npm run dist
 ```
+
 
 
